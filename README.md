@@ -1,13 +1,6 @@
 # MrBellDing
 Make the damn bell ring
 
-/*
- Created by Rui Santos
- Visit: http://randomnerdtutorials.com for more arduino projects
-
- Arduino with Ethernet Shield
- */
-
 #include <SPI.h>
 #include <Ethernet.h>
 #include <Servo.h> 
@@ -71,22 +64,26 @@ void loop() {
            client.println("<hr />");
            client.println("<br />");  
            client.println("<H2>We have a new</H2>");
-           client.print("<input type=text value=submit></form>");        
+           client.print("<input type=text value=""><form>");    
+           client.println("<br />");
+           client.print("<input type=submit value=submit></form>");      
            client.println("<br />");  
-            client.println("<br />");  
-             client.println("<br />");  
-              client.println("<br />");  
-           client.println("<a href=\"/?button2off\"\">Submit</a><br />"); 
+           client.println("<br />");  
+           client.println("<br />");  
+           client.println("<br />");  
+           client.println("<a href=\"/?bellding\"\">Submit</a><br />"); 
            client.println("<br />"); 
            client.println("</BODY>");
            client.println("</HTML>");
-     
+    
+      
            delay(1);
            //stopping client
            client.stop();
            //controls the Arduino if you press the buttons
-
-           if (readString.indexOf("?button2off") >0){
+        
+       
+           if (readString.indexOf("?bellding") >0){
                 for(pos = 180; pos>=1; pos-=3)     // goes from 180 degrees to 0 degrees 
                 {                                
                   microservo.write(pos);              // tell servo to go to position in variable 'pos' 
