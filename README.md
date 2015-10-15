@@ -85,14 +85,7 @@ void loop() {
            //stopping client
            client.stop();
            //controls the Arduino if you press the buttons
-        
-           if (readString.indexOf("?button2on") >0){
-                for(pos = 0; pos < 180; pos += 3)  // goes from 0 degrees to 180 degrees 
-                {                                  // in steps of 1 degree 
-                  microservo.write(pos);              // tell servo to go to position in variable 'pos' 
-                  delay(15);                       // waits 15ms for the servo to reach the position 
-                } 
-           }
+
            if (readString.indexOf("?button2off") >0){
                 for(pos = 180; pos>=1; pos-=3)     // goes from 180 degrees to 0 degrees 
                 {                                
