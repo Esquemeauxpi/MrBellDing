@@ -83,7 +83,7 @@ void loop() {
         
        
            if (readString.indexOf("?bellding") >0){
-                for(pos = 180; pos>=1; pos-=3)     // goes from 180 degrees to 0 degrees 
+                for(pos = 180; pos>=1; pos-=3)     // goes from 180 degerees to 0 degrees 
                 {                                
                   microservo.write(pos);              // tell servo to go to position in variable 'pos' 
                   delay(15);                       // waits 15ms for the servo to reach the position 
@@ -91,8 +91,9 @@ void loop() {
            }
             //clearing string for next read
             readString="";  
-           
-         }
+          
+     
+       }
        }
     }
 }
